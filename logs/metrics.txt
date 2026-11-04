@@ -1,0 +1,12 @@
+Meilleurs paramètres : {'clf__C': 10.0, 'tfidf__max_features': 30000}
+Accuracy : 0.8781
+
+              precision    recall  f1-score   support
+
+          -1       0.83      0.77      0.80      1648
+           0       0.88      0.95      0.91      2485
+           1       0.90      0.88      0.89      3152
+
+    accuracy                           0.88      7285
+   macro avg       0.87      0.87      0.87      7285
+weighted avg       0.88      0.88      0.88      7285

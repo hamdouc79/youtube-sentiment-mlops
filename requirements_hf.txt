@@ -1,0 +1,4 @@
+gradio==4.44.1
+scikit-learn==1.5.2
+joblib==1.4.2
+numpy==1.26.4

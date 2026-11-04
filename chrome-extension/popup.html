@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Sentiment</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <span class="logo">▶ Sentiment Analyzer</span>
+    <button id="toggleDark" title="Dark mode">🌙</button>
+  </header>
+
+  <div id="app">
+    <div id="config">
+      <label>API URL</label>
+      <input id="apiUrl" type="text" placeholder="http://localhost:8000" />
+      <button id="analyzeBtn">Analyser les commentaires</button>
+    </div>
+
+    <div id="status" class="hidden"></div>
+
+    <div id="stats" class="hidden">
+      <div class="stat-row">
+        <div class="stat positif" id="stat-pos">😊 <span>0</span>%</div>
+        <div class="stat neutre" id="stat-neu">😐 <span>0</span>%</div>
+        <div class="stat negatif" id="stat-neg">😠 <span>0</span>%</div>
+      </div>
+      <div id="totalCount"></div>
+    </div>
+
+    <div id="filters" class="hidden">
+      <label>Filtrer :</label>
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="positif">Positif</button>
+      <button class="filter-btn" data-filter="neutre">Neutre</button>
+      <button class="filter-btn" data-filter="negatif">Négatif</button>
+      <button id="copyBtn">📋 Copier</button>
+    </div>
+
+    <ul id="commentList" class="hidden"></ul>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
