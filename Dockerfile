@@ -12,7 +12,7 @@ COPY src/api/__init__.py src/api/__init__.py
 COPY src/__init__.py src/__init__.py
 COPY models/sentiment_pipeline.joblib models/sentiment_pipeline.joblib
 
-# Hugging Face Spaces utilise le port 7860
+ENV PORT=7860
 EXPOSE 7860
 
-CMD ["uvicorn", "src.api.app:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["sh", "-c", "uvicorn src.api.app:app --host 0.0.0.0 --port ${PORT}"]

@@ -85,7 +85,7 @@ function renderList() {
   list.innerHTML = "";
   const filtered = activeFilter === "all"
     ? allResults
-    : allResults.filter(r => r.sentiment === activeFilter || r.sentiment.startsWith(activeFilter.slice(0, 3)));
+    : allResults.filter(r => r.sentiment === activeFilter);
 
   if (filtered.length === 0) {
     list.innerHTML = '<li style="color:var(--text2);font-size:12px;padding:6px">Aucun commentaire pour ce filtre.</li>';
