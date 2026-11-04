@@ -1,0 +1,19 @@
+# Environnement virtuel
+venv/
+.venv/
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Données et logs (régénérables)
+data/raw/*.csv
+data/processed/*.csv
+logs/*.log
+# Secrets
+.env
+*.key
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
