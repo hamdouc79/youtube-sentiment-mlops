@@ -36,6 +36,10 @@ def get_model():
         if not MODEL_PATH.exists():
             raise RuntimeError("Modèle non trouvé. Lancez src/models/train.py d'abord.")
         _model = joblib.load(MODEL_PATH)
+        # Patch sklearn <1.5 models that stored multi_class as an instance attribute
+        clf = _model.named_steps.get("clf")
+        if clf is not None and not hasattr(clf, "multi_class"):
+            clf.multi_class = "auto"
     return _model
 
 

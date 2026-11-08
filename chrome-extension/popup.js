@@ -1,4 +1,4 @@
-const DEFAULT_API = "http://localhost:8000";
+const DEFAULT_API = "https://literate-happiness-v6q7j4p5w7qg3xvr5-7860.app.github.dev";
 
 const $ = id => document.getElementById(id);
 
